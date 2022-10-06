@@ -1,0 +1,206 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$light__grey: #a5a7a6;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 12px transparent, 0 0 0 24px rgba(227, 115, 14, 0);
+  }
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope"),
+    url("../../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+.map {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 80px;
+  top: 10px;
+  min-height: 1122.95px;
+  min-width: 1820px;
+  max-width: 1820px;
+  path {
+    stroke-width: 1.5;
+    transition: all 0.5s;
+    stroke: white;
+    fill: $grey;
+    shape-rendering: geometricPrecision;
+  }
+}
+.circle {
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: default;
+  pointer-events: none;
+}
+.page-qrCode {
+  position: absolute;
+  max-width: 150px;
+  min-width: 150px;
+  z-index: 3;
+  left: 1688.5px;
+  top: 864.45px;
+  transition: 0.5s ease-in-out;
+  opacity: 0.7;
+}
+.sidebar {
+  position: absolute;
+  z-index: 1000;
+  left: 74.39px;
+  top: 131.83px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 547.11px;
+  height: 780px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+  p {
+    color: $dark__grey;
+  }
+  .title {
+    margin: 5% 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    svg {
+      position: relative;
+      bottom: 5px;
+      right: 20px;
+    }
+    p {
+      margin: 0 0 0 12%;
+      font-size: 18.83px;
+      font-weight: 700;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    max-height: 44px;
+    .info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &:nth-child(1) {
+        margin-left: 5%;
+      }
+      &:nth-child(2) {
+        margin-left: 2%;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .city {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 210.93px;
+        p {
+          margin: 0;
+          width: 210.93px;
+          color: $dark__grey;
+
+          &:nth-child(1) {
+            font-size: 11px;
+            font-weight: 700;
+          }
+          &:nth-child(2) {
+            font-size: 11px;
+          }
+          p {
+            margin: 0 0 0 15px;
+            cursor: default;
+            user-select: none;
+            &:nth-child(1) {
+              font-size: 14px;
+            }
+            &:nth-child(2) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 13.1833px;
+        margin-right: 15px;
+        font-weight: 700;
+        min-width: 21.54px;
+        min-height: 21.54px;
+        max-width: 21.54px;
+        max-height: 21.54px;
+      }
+    }
+  }
+  &-operators {
+    .title {
+      margin: 5% 0 2% 0;
+    }
+    .info {
+      margin: 7px 0;
+      span {
+        background: $purple;
+        color: white;
+        border: 2px solid $purple;
+      }
+    }
+  }
+  &-regions {
+    .title {
+      margin: 5% 0 2% 0;
+    }
+    .info {
+      margin: 7px 0;
+      span {
+        background: $blue;
+        color: white;
+        border: 2px solid $blue;
+      }
+    }
+  }
+}
+.btn {
+  position: absolute !important;
+  left: 113px;
+  top: 54px;
+  z-index: 1000;
+  background: transparent !important;
+  border: none;
+  box-shadow: 0 0 0 0 #f0f0f0, 0 0 0 0 rgba(227, 115, 14, 0.7);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0.33, 0, 1);
+  img {
+    width: 81px;
+    height: 52px;
+    left: 101.67px;
+  }
+}
+.mainModal{
+  .MuiPaper-root{
+    min-width: 1700px;
+    max-width: 1700px;
+  }
+}

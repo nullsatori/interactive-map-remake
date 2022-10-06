@@ -1,0 +1,216 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$light__grey: #a5a7a6;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+.main {
+  &-schedule-btn {
+    position: absolute;
+    left: 50px;
+    top: 112.72px;
+    z-index: 4;
+  }
+
+  .circle {
+    &:first-child {
+      background: $purple;
+      color: white;
+      top: 750px;
+      right: 1180px;
+    }
+    + .blue {
+      background: $blue;
+      color: white;
+    }
+    &:nth-child(21) {
+      left: 430px;
+      top: 380px;
+    }
+    &:nth-child(22) {
+      top: 570px;
+      left: 220px;
+    }
+    &:nth-child(23) {
+      top: 560px;
+      left: 440px;
+    }
+    &:nth-child(24) {
+      visibility: hidden;
+    }
+    &:nth-child(25) {
+      top: 590px;
+      left: 315px;
+    }
+    &:nth-child(26) {
+      top: 645px;
+      left: 440px;
+    }
+    &:nth-child(27) {
+      visibility: hidden;
+    }
+    &:nth-child(28) {
+      top: 735px;
+      left: 180px;
+    }
+    &:nth-child(29) {
+      top: 425px;
+      left: 255px;
+    }
+    &:nth-child(30) {
+      top: 795px;
+      left: 1530px;
+    }
+    + .purple {
+      background: $purple;
+      color: white;
+      &:nth-child(2) {
+        top: 600px;
+        left: 550px;
+      }
+      &:nth-child(3) {
+        top: 663px;
+        left: 505px;
+      }
+      &:nth-child(4) {
+        top: 350px;
+        left: 290px;
+      }
+      &:nth-child(5) {
+        top: 600px;
+        left: 410px;
+      }
+      &:nth-child(6) {
+        top: 625px;
+        left: 365px;
+      }
+      &:nth-child(7) {
+        top: 780px;
+        right: 1090px;
+      }
+      &:nth-child(8) {
+        top: 660px;
+        left: 610px;
+      }
+      &:nth-child(9) {
+        top: 750px;
+        left: 890px;
+      }
+      &:nth-child(10) {
+        top: 530px;
+        left: 350px;
+      }
+      &:nth-child(11) {
+        top: 550px;
+        left: 1250px;
+      }
+      &:nth-child(12) {
+        top: 560px;
+        left: 500px;
+      }
+      &:nth-child(13) {
+        top: 950px;
+        left: 1458px;
+      }
+      &:nth-child(14) {
+        top: 570px;
+        right: 1250px;
+      }
+      &:nth-child(15) {
+        top: 685px;
+        right: 1130px;
+      }
+      &:nth-child(16) {
+        top: 553px;
+        left: 315px;
+      }
+      &:nth-child(17) {
+        top: 830px;
+        left: 1030px;
+      }
+      &:nth-child(18) {
+        top: 485px;
+        left: 340px;
+      }
+      &:nth-child(19) {
+        top: 640px;
+        left: 200px;
+      }
+      &:nth-child(20) {
+        top: 560px;
+        left: 275px;
+      }
+    }
+  }
+  .MuiDialog-paper {
+    width: 85%;
+    height: 85%;
+    max-width: 1920px !important;
+    max-height: 900px !important;
+    min-width: 90%;
+    min-height: 918px;
+  }
+  &-map {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 80px;
+    top: 10px;
+    min-height: 1122.95px;
+    min-width: 1820px;
+    max-width: 1820px;
+    path {
+      fill: $light__grey;
+      stroke: white;
+      stroke-width: 1.5;
+      shape-rendering: geometricPrecision;
+    }
+    #RU-SAK,
+    #RU-ARK,
+    #RU-TVE,
+    #RU-PNZ,
+    #RU-VOR,
+    #RU-SE,
+    #RU-BA,
+    #RU-UD {
+      fill: $dark__grey;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        fill: #313536;
+      }
+    }
+    #RU-SA,
+    #RU-PRI,
+    #RU-KYA,
+    #RU-IRK,
+    #RU-KYA,
+    #RU-TOM,
+    #RU-NVS,
+    #RU-KEM,
+    #RU-KHM,
+    #RU-TYU,
+    #RU-SVE,
+    #RU-PER,
+    #RU-CHE,
+    #RU-ROS,
+    #RU-LEN,
+    #RU-TA,
+    #RU-MO,
+    #RU-NIZ,
+    #RU-IVA,
+    #RU-TAM,
+    #RU-SAM,
+    #RU-SPE {
+      fill: $green;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        fill: #a1ff00;
+      }
+    }
+    #RU-MOW {
+      fill: $orange;
+    }
+  }
+}

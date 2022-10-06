@@ -1,0 +1,51 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$light__grey: #a5a7a6;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+.research {
+  .map {
+    #RU-IVA,
+    #RU-TA,
+    #RU-MOS,
+    #RU-IRK,
+    #RU-PER,
+    #RU-SAM,
+    #RU-ROS,
+    #RU-BU,
+    #RU-VLA,
+    #RU-TOM,
+    #RU-LEN,
+    #RU-NVS,
+    #RU-MO,
+    #RU-TAM,
+    #RU-AST,
+    #RU-SPE,
+    #RU-OMS,
+    #RU-CHE,
+    #RU-SA,
+    #RU-PNZ,
+    #RU-LIP {
+      fill: $blue;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        fill: #4286d3;
+      }
+    }
+    #RU-MOW {
+      fill: $orange;
+    }
+  }
+
+  .research__btn {
+    position: absolute;
+    width: 194.93px;
+    height: 51.79px;
+    left: 50px;
+    top: 112.72px;
+    z-index: 4;
+  }
+}

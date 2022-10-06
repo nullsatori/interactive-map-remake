@@ -1,0 +1,126 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$light__grey: #a5a7a6;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope"),
+    url("../../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+
+.Header {
+  position: absolute;
+  left: -28px;
+  top: 43px;
+  min-width: 1506.73px;
+  max-width: 1506.73px;
+  min-height: 52px;
+  max-height: 52px;
+  z-index: 3;
+  .MuiButtonBase-root {
+    font-family: "Manrope", sans-serif;
+    + .Header-inactive-link {
+      background: $dark__grey;
+      color: white;
+      font-weight: 500;
+    }
+    + .Header-active-link {
+      background: $green;
+      color: $dark__grey;
+    }
+  }
+  &-button-img-hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &-button-img {
+    min-width: 81px;
+    min-height: 52px;
+    max-width: 81px;
+    max-height: 52px;
+    left: 98.67px;
+  }
+  img {
+    position: absolute;
+    &:nth-child(1) {
+      z-index: 5;
+      left: 80px;
+      min-width: 52px;
+      max-width: 52px;
+    }
+  }
+
+  button {
+    color: $dark__grey;
+    border-radius: 12px 0 12px 12px;
+    font-size: 17px;
+    text-transform: none;
+    font-weight: bold;
+    &:nth-child(3) {
+      display: none;
+    }
+    &:nth-child(4) {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 410.49px;
+      max-height: 52px;
+      min-width: 410.49px;
+      min-height: 52px;
+      left: 200px;
+    }
+    &:nth-child(5) {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 230.63px;
+      min-width: 230.63px;
+      max-height: 52px;
+      min-height: 52px;
+      left: 625px;
+    }
+    &:nth-child(6) {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 141.63px;
+      min-width: 141.63px;
+      max-height: 52px;
+      min-height: 52px;
+      left: 869px;
+    }
+    &:nth-child(7) {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 421.22px;
+      min-width: 421.22px;
+      max-height: 52px;
+      min-height: 52px;
+      left: 1025px;
+    }
+    &:nth-child(8) {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 129.73px;
+      min-width: 129.73px;
+      max-height: 52px;
+      min-height: 52px;
+      left: 1460px;
+    }
+    transition: 0.5s;
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}

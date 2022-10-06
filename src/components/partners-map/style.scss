@@ -1,0 +1,121 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+.partners {
+  .circle {
+    background: $dark__grey;
+    color: white;
+    &:nth-child(1) {
+      top: 530px;
+      right: 650px;
+    }
+    &:nth-child(2) {
+      top: 515px;
+      left: 365px;
+      z-index: 5;
+      pointer-events: all;
+    }
+    &:nth-child(3) {
+      top: 640px;
+      left: 200px;
+    }
+    &:nth-child(4) {
+      top: 625px;
+      left: 370px;
+    }
+    &:nth-child(5) {
+      top: 540px;
+      left: 340px;
+      z-index: 5;
+      pointer-events: all;
+    }
+    &:nth-child(6) {
+      top: 570px;
+      left: 445px;
+    }
+    &:nth-child(7) {
+      top: 565px;
+      left: 325px;
+    }
+    &:nth-child(8) {
+      top: 510px;
+      left: 315px;
+    }
+  }
+  #RU-SA,
+  #RU-NIZ,
+  #RU-ROS,
+  #RU-SAM,
+  #RU-UD,
+  #RU-MO,
+  #RU-VLA {
+    fill: $purple;
+    &:hover {
+      transition: 0.5s ease-in-out;
+      fill: #7c00ff;
+    }
+  }
+  #RU-MOW {
+    fill: $orange;
+  }
+}
+
+.partners-sidebar {
+  height: 600px;
+  width: 440px;
+  font-size: 13px;
+  .operators {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    p {
+      margin-left: 100px;
+      max-width: 300px;
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 700;
+    }
+    stroke: white;
+  }
+  .info {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 14px 0;
+    span {
+      background: $dark__grey;
+      border: 1px solid $dark__grey;
+    }
+  }
+  .city {
+    width: fit-content;
+    margin: 5px 15px;
+
+    p {
+      width: fit-content;
+      margin: 0;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 3px 10px;
+    position: relative;
+    bottom: 0;
+    width: 5px;
+    cursor: default;
+    user-select: none;
+    margin-left: 60px;
+  }
+}
