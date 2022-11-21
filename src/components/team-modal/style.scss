@@ -1,0 +1,122 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$light__grey: #a5a7a6;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+.teamModal {
+  @media screen and (max-width: 768px) {
+    .MuiPaper-root {
+      min-width: 100vw;
+      min-height: 100vh;
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+    .qrCode {
+      margin-top: 20px;
+      width: 50%;
+    }
+    p,
+    li {
+      font-size: 18px;
+    }
+    .teamModal-person-info {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 15% 0 0 0;
+      .person-info-image {
+        margin: 0 0 5% 0;
+      }
+      &-summary {
+        div {
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+          align-self: center;
+          ul {
+            align-self: center;
+            padding: 0;
+            li {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    .partnersModal-info-summary {
+      .title {
+        flex-direction: column;
+        div {
+          flex-direction: column;
+        }
+      }
+    }
+    .qrCode {
+      align-self: center;
+      padding-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    h2,
+    p,
+    li {
+      font-size: 30px;
+    }
+    .qrCode{
+      max-height: 150px;
+      max-width: 150px;
+    }
+    ul {
+      display: flex;
+      flex-flow: column wrap;
+      max-height: 150px;
+      max-width: 75%;
+      li {
+        margin: 5px 0;
+        min-width: 400px;
+      }
+    }
+    .MuiPaper-root {
+      min-width: 84%;
+      max-height: 70%;
+      min-height: 70%;
+    }
+    .qrCode {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+    .teamModal {
+      &-person-info {
+        flex-direction: row;
+        margin: 50px 0 0 50px;
+        &-summary {
+          max-width: 60%;
+          margin-left: 60px;
+        }
+      }
+    }
+  }
+  h2 {
+    margin: 0;
+  }
+  ul{
+    width: fit-content;
+  }
+  .person-info-image {
+    border-radius: 15px 0 15px 15px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  &-person-info {
+    display: flex;
+    align-content: center;
+    &-summary {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

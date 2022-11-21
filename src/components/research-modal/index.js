@@ -3,6 +3,7 @@ import React from "react";
 import NiceModal, { muiDialog, useModal } from "@ebay/nice-modal-react";
 import { Dialog, Slide } from "@mui/material";
 import { cn as bem } from "@bem-react/classname";
+import useWindowSize from "../../app/utils";
 import "./style.scss";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -13,42 +14,50 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export const ResearchModal = NiceModal.create(({ qrCode }) => {
   const modal = useModal();
-  const cn = bem('mainModal');
+  const cn = bem('researchModal');
+  const [width] = useWindowSize();
+
   return (
     <Dialog
       TransitionComponent={Transition}
       {...muiDialog(modal)}
       className={cn('')}
     >
-      <div id="sideBar">
-        <img src={qrCode} alt="qr-code-research" className="qrCode" />
-        <div className="sideBar__summary">
-          <svg
-            onClick={() => modal.hide()}
-            width="47"
-            height="47"
-            viewBox="0 0 29 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M24.5897 5.03536C19.0759 -0.478422 10.1242 -0.478422 4.61037 5.03536C-0.903409 10.5491 -0.903409 19.5009 4.61037 25.0147C10.1242 30.5285 19.0759 30.5285 24.5897 25.0147C30.1035 19.5009 30.1035 10.5491 24.5897 5.03536ZM23.2579 6.36717C28.0362 11.1455 28.0362 18.9044 23.2579 23.683C18.4795 28.4613 10.7207 28.4613 5.94208 23.683C1.16346 18.9046 1.16373 11.1458 5.94208 6.36717C10.7204 1.58883 18.4793 1.58883 23.2579 6.36717ZM13.2685 15.0251L9.59807 11.3547C9.23038 10.9874 9.23038 10.3901 9.59807 10.0228C9.96535 9.65515 10.5626 9.65515 10.9299 10.0228L14.6003 13.6933L18.2707 10.0228C18.638 9.65515 19.2353 9.65515 19.6025 10.0228C19.9702 10.3901 19.9702 10.9874 19.6025 11.3547L15.9321 15.0251L19.6025 18.6955C19.9702 19.0628 19.9702 19.66 19.6025 20.0273C19.2353 20.395 18.638 20.395 18.2707 20.0273L14.6003 16.3569L10.9299 20.0273C10.5626 20.395 9.96534 20.395 9.59807 20.0273C9.23038 19.66 9.23038 19.0628 9.59807 18.6955L13.2685 15.0251Z"
-              fill="#4D5759"
-            />
-          </svg>
+      {(width < 768 && (
+        <div className="exit" onClick={() => modal.hide()}>
+          Закрыть
+        </div>
+      )) || (
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={() => modal.hide()}
+          className='exitCircle'
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M42.6808 7.31918C32.9219 -2.43973 17.0781 -2.43973 7.31918 7.31918C-2.43973 17.0781 -2.43973 32.9219 7.31918 42.6808C17.0781 52.4397 32.9219 52.4397 42.6808 42.6808C52.4397 32.9219 52.4397 17.0781 42.6808 7.31918ZM40.3236 9.67637C48.7809 18.1336 48.7809 31.8661 40.3236 40.3238C31.8664 48.7811 18.1339 48.7811 9.67618 40.3238C1.21846 31.8666 1.21893 18.1341 9.67618 9.67637C18.1334 1.21912 31.8659 1.21912 40.3236 9.67637ZM22.6433 25.0001L16.147 18.5038C15.4962 17.8537 15.4962 16.7966 16.147 16.1466C16.797 15.4958 17.8541 15.4958 18.5042 16.1466L25.0005 22.6429L31.4968 16.1466C32.1468 15.4958 33.204 15.4958 33.854 16.1466C34.5048 16.7966 34.5048 17.8538 33.854 18.5038L27.3577 25.0001L33.854 31.4964C34.5048 32.1465 34.5048 33.2036 33.854 33.8536C33.2039 34.5044 32.1468 34.5044 31.4968 33.8536L25.0005 27.3573L18.5042 33.8536C17.8541 34.5044 16.797 34.5044 16.147 33.8536C15.4962 33.2036 15.4962 32.1464 16.147 31.4964L22.6433 25.0001Z"
+            fill="#4D5759"
+          />
+        </svg>
+      )}
+      <div className={cn('wrapper')}>
+        <div className={cn('summary')}>
           <div className="info">
             <p>
               Платформа трансфера технологий - инструмент для поиска
-              исполнителей и заказчиков на НИОКР, реинжиниринг, <br />{" "}
+              исполнителей и заказчиков на НИОКР, реинжиниринг,{" "}
               прототипирование, испытания, проекты метрологии и биомедицины.
             </p>
             <h3>Основные цели и задачи</h3>
             <ul>
               <li>
                 Привлечь в вузы и организации финансирование от заказчиков услуг
-                по НИОКР, реинжинирингу, прототипированию, <br /> испытаниям,
+                по НИОКР, реинжинирингу, прототипированию, испытаниям,
                 биомедицине и метрологии
               </li>
               <li>
@@ -57,12 +66,12 @@ export const ResearchModal = NiceModal.create(({ qrCode }) => {
               </li>
               <li>
                 Организация со стороны Фонда «Сколково» качественной проверки
-                пользователей, сопровождение сделок, оказание <br /> помощи
+                пользователей, сопровождение сделок, оказание помощи
               </li>
             </ul>
             <h3>Результаты работы платформы</h3>
-            <div className="wrapper">
-              <div className="wrapper__info">
+            <div className="info-wrapper">
+              <div className="info-wrapper-item">
                 <p>Подключено 700 организаций, из них:</p>
                 <ul>
                   <li>26 вузов,</li>
@@ -70,7 +79,7 @@ export const ResearchModal = NiceModal.create(({ qrCode }) => {
                   <li>601 иных организаций.</li>
                 </ul>
               </div>
-              <div className="wrapper__info">
+              <div className="info-wrapper-item">
                 <p>
                   В 2021 году заключено 48 контрактов на сумму 52,3 млн руб.
                 </p>
@@ -78,7 +87,7 @@ export const ResearchModal = NiceModal.create(({ qrCode }) => {
                   В 2022 году уже размещено 266 заявок на сумму 495 млн руб.
                 </p>
                 <p>
-                  Подписано 9 соглашений с вузами и их ЦТТ о совместном <br />{" "}
+                  Подписано 9 соглашений с вузами и их ЦТТ о совместном{" "}
                   развитии платформы.
                 </p>
               </div>
@@ -89,6 +98,7 @@ export const ResearchModal = NiceModal.create(({ qrCode }) => {
             </p>
           </div>
         </div>
+        <img src={qrCode} alt="qr-code-research" className="qrCode" />
       </div>
     </Dialog>
   );

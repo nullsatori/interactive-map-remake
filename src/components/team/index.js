@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 import { Zoom } from "@mui/material";
 import React from "react";
 import "./style.scss";
-function Team({ openModal, images, qrCodes }) {
+
+
+function Team({ showModal, images }) {
+
+
   return (
     <motion.div
       initial={{ x: 0, opacity: 0 }}
@@ -16,7 +20,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__1")}
+            onClick={() => showModal("PERSON_1")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -32,7 +36,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__2")}
+            onClick={() => showModal("PERSON_2")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -48,7 +52,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__3")}
+            onClick={() => showModal("PERSON_3")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -64,7 +68,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__4")}
+            onClick={() => showModal("PERSON_4")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -80,7 +84,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__5")}
+            onClick={() => showModal("PERSON_5")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -96,7 +100,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__12")}
+            onClick={() => showModal("PERSON_12")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -114,7 +118,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__6")}
+            onClick={() => showModal("PERSON_6")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -130,7 +134,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__7")}
+            onClick={() => showModal("PERSON_7")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -146,7 +150,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__8")}
+            onClick={() => showModal("PERSON_8")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -162,7 +166,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__9")}
+            onClick={() => showModal("PERSON_9")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -178,7 +182,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__10")}
+            onClick={() => showModal("PERSON_10")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -194,7 +198,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__11")}
+            onClick={() => showModal("PERSON_11")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}
@@ -212,7 +216,7 @@ function Team({ openModal, images, qrCodes }) {
             className="person"
             tabIndex={0}
             role="button"
-            onClick={() => openModal("PERSON__13")}
+            onClick={() => showModal("PERSON_13")}
           >
             <img
               style={{ backgroundColor: "grey", width: "250", height: "250" }}

@@ -10,167 +10,77 @@ $blue: #8cb8e8;
   margin-top: 125px;
 }
 
-.schedule {
-  display: flex;
-  flex-direction: column;
-  max-width: 1458px;
-  margin: 60px 123px 0 113px;
-  svg {
-    position: absolute;
-    right: 26px;
-    top: 31px;
+.tableModal{
+  @media screen and (max-width: 768px){
+    .item{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .time{
+      margin: 2% 0;
+    }
+    h2{
+      text-align: center;
+    }
   }
-  h2:nth-child(12) {
-    margin-top: 50px;
-  }
-  h2 {
-    color: $purple;
-    margin: 0 0 10px 0;
-    font-size: 35px;
-  }
-  .item {
-    display: flex;
-    flex-direction: row;
-    max-width: 1456px;
-    align-items: center;
-    margin-bottom: 0px;
-    min-height: 130px;
-    &:nth-child(3) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
+  @media screen and (min-width: 768px){
+    .MuiPaper-root{
+      min-width: 88%;
+      max-height: 85%;
     }
-    &:nth-child(4) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(7) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(8) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(9) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(10) {
-      .info {
-        p {
-          position: relative;
-          top: 25px;
-        }
-      }
-    }
-    &:nth-child(11) {
-      .info {
-        p {
-          position: relative;
-          top: 25px;
-        }
-      }
-    }
-    &:nth-child(12) {
-      .info {
-        p {
-          position: relative;
-          top: 25px;
-        }
-      }
-    }
-    &:nth-child(13) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(14) {
-      .info {
-        p {
-        }
-      }
-    }
-    &:nth-child(15) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(16) {
-      margin-bottom: 40px;
-      .info {
-        p {
-          position: relative;
-          top: 42px;
-          &:nth-child(2) {
-            margin-top: 10px;
-          }
-        }
-      }
-    }
-    &:nth-child(17) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
-    &:nth-child(18) {
-      .info {
-        p {
-          position: relative;
-          top: 10px;
-        }
-      }
-    }
+    .item{
+      flex-direction: row;
 
-    * {
-      color: $dark__grey;
     }
-    .info {
-      p {
-        margin: 0;
-        font-size: 21px;
-        line-height: 26px;
-        font-weight: 500;
-        max-width: 1253px;
-        min-width: 1253px;
-      }
+    h2{
+      width: max-content;
     }
-    .time {
-      max-width: 160px;
+    .time{
       margin-right: 53px;
-      p {
-        width: 160px;
-        margin-top: 27px;
-        font-size: 25px;
-        font-weight: 700;
+    }
+  }
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 30px 0 0 0;
+    h2:nth-child(12) {
+      margin-top: 50px;
+    }
+    h2 {
+      color: $purple;
+      margin-bottom: 10px;
+      font-size: 35px;
+    }
+    .wrapper{
+      max-width: 85%;
+      min-width: 85%;
+      margin: 0 auto;
+    }
+    .item {
+      display: flex;
+      max-height: fit-content;
+      margin: 4% 0;
+      justify-self: baseline;
+      .info {
+        min-height: fit-content;
+        p {
+          margin: 0;
+          font-size: 21px;
+          line-height: 26px;
+          font-weight: 500;
+        }
+      }
+      .time {
+        max-width: 160px;
+
+        p {
+          width: 160px;
+          margin: 0;
+          font-size: 25px;
+          font-weight: 700;
+        }
       }
     }
   }

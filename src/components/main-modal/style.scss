@@ -1,0 +1,227 @@
+$green: #b0ec51;
+$dark__grey: #4d5759;
+$grey: #a5a7a6;
+$orange: #ffc000;
+$purple: #9633ff;
+$blue: #8cb8e8;
+
+.mainModal {
+  @media screen and (max-width: 768px) {
+    p{
+      font-size: 18px;
+    }
+    .mainModal-info {
+      flex-direction: column;
+      align-items: center;
+      &-summary{
+        &-items{
+          flex-wrap: nowrap;
+          justify-content: center;
+          .item{
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+      }
+      .images {
+        align-items: center;
+        width: 60vw;
+        flex-direction: row;
+        margin-top: 1em;
+        .modal-logo {
+          max-width: 50vw;
+          max-height: 150px;
+        }
+      }
+      .codes {
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+        .qrCode {
+          height: auto;
+          width: 40%;
+          margin: 2em 0;
+        }
+      }
+      .wrapper {
+        width: 95%;
+        justify-content: center;
+        .startup {
+
+          text-align: center;
+          .startup-info {
+            flex-direction: column;
+            .startup-logo {
+              margin: 0;
+              width: 40vw;
+            }
+          }
+        }
+        h2 {
+          text-align: center;
+          padding: 0 1em;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .MuiPaper-root {
+      min-width: 88%;
+      min-height: 84%;
+      max-height: 84%;
+    }
+    h2{
+      font-size: 30px;
+      line-height: 40px;
+    }
+    p{
+      font-size: 20px;
+    }
+    .mainModal-content{
+      width: 90%;
+    }
+    .mainModal-info {
+      .startup{
+        &:nth-child(1){
+          margin-top: 25px;
+        }
+      }
+      &-summary{
+        margin-top: 2.5em;
+        align-items: center;
+        &-items{
+          min-width: 42%;
+          max-width: 45rem;
+          img{
+            margin-right: 16px;
+          }
+          .item{
+            display: flex;
+            flex-direction: row;
+            svg{
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+      flex-direction: row;
+      .images {
+        padding: 0 2%;
+        width: 28vw;
+        .modal-logo{
+          max-width: 400px;
+          max-height: 300px;
+        }
+      }
+      .codes {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        .qrCode {
+          &:only-child{
+            width: 220px;
+            height: 220px;
+            position: unset;
+          }
+          margin-right: 1.5em;
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      .wrapper {
+        width: 60%;
+        .startup{
+          .startup-info{
+            margin: 0.5em 1em 0.5em 0;
+            .startup-logo{
+              max-height: 75px;
+            }
+          }
+        }
+        > h2 {
+          max-width: fit-content;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .mainModal-info {
+    display: flex;
+    margin-top: 53px;
+    .images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .modal-logo {
+        height: auto;
+        margin-bottom: 26px;
+      }
+      .modal-tech {
+        object-fit: contain;
+        max-width: 90%;
+        border-radius: 14.89px 0 14.89px 14.8941px;
+      }
+    }
+    .wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    p {
+      margin: 0;
+    }
+    .mainModal-info-startups {
+      display: flex;
+      flex-direction: column;
+    }
+    .mainModal-info-summary {
+      display: flex;
+      flex-direction: row;
+      &-items {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+          display: flex;
+          min-width: 20rem;
+          max-width: 20rem;
+          margin: 10px 0 10px 0;
+          svg {
+            min-width: 61px;
+            max-width: 61px;
+          }
+          img {
+            min-height: 61px;
+            min-width: 61px;
+            max-height: 61px;
+            max-width: 61px;
+          }
+          align-items: center;
+        }
+      }
+    }
+    .startup-info {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 35px; // todo: избавиться от всех vh, color:grey и сделать рефактор этого файла
+        object-fit: contain;
+      }
+    }
+    .mainModal-content {
+      &-startups {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .startup {
+      display: flex;
+      flex-direction: column;
+      p{
+        padding: 10px 0;
+      }
+    }
+  }
+}

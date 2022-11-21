@@ -1,0 +1,90 @@
+.partnersModal {
+  @media screen and (max-width: 768px) {
+    p{
+      font-size: 18px;
+    }
+    .partnersModal-info{
+      text-align: center;
+    }
+    .partnersModal-info-summary{
+      .title{
+        flex-direction: column;
+        div{
+          flex-direction: column;
+        }
+      }
+    }
+    .qrCode{
+      align-self: center;
+      padding-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .MuiPaper-root {
+      min-width: 88%;
+      min-height: 93%;
+    }
+    .partnersModal-info-summary{
+      .title{
+        flex-direction: row;
+        p{
+          margin: 0 77px 0 0;
+        }
+        img{
+          margin-right: 30px;
+        }
+      }
+    }
+    p {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  &-info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    &-summary {
+      max-width: 90%;
+      margin: 0 auto;
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .request {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    div {
+      p:nth-child(1) {
+        margin-bottom: 0;
+      }
+    }
+    p {
+    }
+  }
+  .title {
+    img {
+      max-height: 100px;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      svg {
+        min-width: 64px;
+        margin-right: 33px;
+      }
+    }
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+  }
+
+
+}

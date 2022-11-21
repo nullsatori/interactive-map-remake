@@ -28,7 +28,7 @@ function Header({ images }) {
         setActive(4);
         break;
       default:
-        console.log("H");
+        return 0;
     }
   }, [location]);
 
@@ -46,8 +46,6 @@ function Header({ images }) {
             : cn("button-img-hidden")
         }
       />
-      <Button />{" "}
-      {/* todo: костыль. без него почему-то первая кнопка игнорирует стили.*/}
       <Button
         onClick={() => {
           navigate("/");
@@ -91,5 +89,5 @@ function Header({ images }) {
     </div>
   );
 }
-
+// todo: сделать меню для маленьких экранов, + менюшки
 export default React.memo(Header);

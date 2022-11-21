@@ -7,9 +7,10 @@ $purple: #9633ff;
 $blue: #8cb8e8;
 
 .main {
+  max-width: 100vw;
   &-schedule-btn {
     position: absolute;
-    left: 50px;
+    left: 10.5%;
     top: 112.72px;
     z-index: 4;
   }
@@ -144,23 +145,7 @@ $blue: #8cb8e8;
       }
     }
   }
-  .MuiDialog-paper {
-    width: 85%;
-    height: 85%;
-    max-width: 1920px !important;
-    max-height: 900px !important;
-    min-width: 90%;
-    min-height: 918px;
-  }
-  &-map {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    left: 80px;
-    top: 10px;
-    min-height: 1122.95px;
-    min-width: 1820px;
-    max-width: 1820px;
+  .map {
     path {
       fill: $light__grey;
       stroke: white;

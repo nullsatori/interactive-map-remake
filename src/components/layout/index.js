@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../header";
 import "./style.scss";
+import "normalize.css";
 
 function Layout(props) {
   return (

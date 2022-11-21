@@ -1,0 +1,30 @@
+.dialog__rd {
+  width: fit-content;
+  height: fit-content;
+  .MuiBackdrop-root {
+    width: fit-content;
+    height: fit-content;
+  }
+  .MuiPaper-root {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
+    min-width: 447.29px;
+    min-height: 79.1px;
+    border: 3px solid white;
+    box-shadow: 0 52.7333px 143.133px rgba(3, 119, 26, 0.08),
+      0 22.0307px 59.7977px rgba(3, 119, 26, 0.0575083),
+      0 11.7787px 31.9707px rgba(3, 119, 26, 0.0476886),
+      0 6.60303px 17.9225px rgba(3, 119, 26, 0.04),
+      0 3.50682px 9.51851px rgba(3, 119, 26, 0.0323114),
+      0 1.45927px 3.96087px rgba(3, 119, 26, 0.0224916);
+    border-radius: 17.6285px 0 17.6285px 17.6285px;
+  }
+  .MuiDialog-paper {
+    max-width: fit-content;
+    max-height: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
+  }
+}
