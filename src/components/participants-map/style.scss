@@ -1,11 +1,8 @@
-#participants {
-  svg {
-    position: absolute;
-    min-width: 1820px;
-    min-height: 1122px;
-    max-width: 1820px;
-    max-height: 1122px;
-    top: 0;
-    left: 50px;
+.participants {
+  div{
+    max-height: 90vh;
+  }
+  svg{
+    padding-top: 2%;
   }
 }

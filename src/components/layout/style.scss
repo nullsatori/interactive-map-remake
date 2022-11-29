@@ -28,7 +28,7 @@ $blue: #8cb8e8;
   }
 }
 
-.main, .research{
+.main, .research, .participants{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -223,7 +223,7 @@ $blue: #8cb8e8;
   }
 }
 .btn {
-  position: absolute !important;
+  position: relative;
   left: 113px;
   top: 54px;
   z-index: 1000;

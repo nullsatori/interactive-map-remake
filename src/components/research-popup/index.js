@@ -12,20 +12,20 @@ export const ResearchPopup = NiceModal.create(({ id, data }) => {
     return (
         <Popover
             anchorReference="anchorPosition"
-            anchorPosition={{ top: 220, left: 350 }}
+            anchorPosition={{ top: 220, left: 150 }}
             anchorOrigin={{
                 vertical: 'center',
-                horizontal: 'center',
+                horizontal: 'left',
             }}
             transformOrigin={{
                 vertical: 'center',
-                horizontal: 'center',
+                horizontal: 'left',
             }}
             {...muiDialogV5(modal)}
-            className="dialog__rd"
+            className="popup"
 
         >
-            <div className="rd__modal__info">
+            <div className="popup-info">
                 {listItems}
             </div>
         </Popover>
