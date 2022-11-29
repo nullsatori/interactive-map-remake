@@ -25,7 +25,7 @@ function ResearchMap({ showModal, closeModal, qrCodes }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         onClick={() => showModal("ResearchModal")}
-        className="research__btn"
+        className="research-btn"
       >
         <path
           d="M2.33337 13.5196C2.33337 7.00112 7.61769 1.7168 14.1362 1.7168H197.258V41.7056C197.258 48.2241 191.974 53.5085 185.456 53.5085H14.1362C7.6177 53.5085 2.33337 48.2242 2.33337 41.7056V13.5196Z"
