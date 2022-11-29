@@ -7,8 +7,6 @@ import Box from "@mui/material/Box";
 import { cn as bem } from "@bem-react/classname";
 import "./style.scss";
 
-// import qrCodePartners from '../../../public/qr-code-regPart.png';
-
 function PartnersMap({ showModal, qrCodes }) {
   const cn = bem("partners");
   const cnSB = bem("sidebar");
@@ -210,7 +208,7 @@ function PartnersMap({ showModal, qrCodes }) {
         <div className="circle">7</div>
         <div className="circle">8</div>
       </div>
-      <Box sx={{ height: 180 }}>
+      <Box sx={{ height: 180 }} className='box'>
         <FormControlLabel
           control={
             <Fab

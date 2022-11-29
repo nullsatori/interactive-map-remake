@@ -493,7 +493,7 @@ function MainMap({ showModal, qrCodes }) {
         <div className="circle blue">8</div>
       </div>
 
-      <Box className={cn("box")}>
+      <Box className='box'>
         <FormControlLabel
           control={
             <Fab
